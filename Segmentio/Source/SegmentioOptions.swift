@@ -195,6 +195,7 @@ public struct SegmentioOptions {
     var imageContentMode: UIView.ContentMode
     var labelTextAlignment: NSTextAlignment
     var labelTextNumberOfLines: Int
+    var labelTextMinimumScaleFactor: CGFloat
     var states: SegmentioStates
     var animationDuration: CFTimeInterval
     
@@ -208,6 +209,7 @@ public struct SegmentioOptions {
         self.imageContentMode = .center
         self.labelTextAlignment = .center
         self.labelTextNumberOfLines = 0
+        self.labelTextMinimumScaleFactor = 0.5
         self.states = SegmentioStates(defaultState: SegmentioState(),
                                         selectedState: SegmentioState(),
                                         highlightedState: SegmentioState())
@@ -223,6 +225,7 @@ public struct SegmentioOptions {
                 imageContentMode: UIView.ContentMode = .center,
                 labelTextAlignment: NSTextAlignment = .center,
                 labelTextNumberOfLines: Int = 0,
+                labelTextMinimumScaleFactor: CGFloat = 0.5,
                 segmentStates: SegmentioStates = SegmentioStates(defaultState: SegmentioState(),
                                                                  selectedState: SegmentioState(),
                                                                  highlightedState: SegmentioState()),
@@ -236,6 +239,7 @@ public struct SegmentioOptions {
         self.imageContentMode = imageContentMode
         self.labelTextAlignment = labelTextAlignment
         self.labelTextNumberOfLines = labelTextNumberOfLines
+        self.labelTextMinimumScaleFactor = labelTextMinimumScaleFactor
         self.states = segmentStates
         self.animationDuration = animationDuration
     }

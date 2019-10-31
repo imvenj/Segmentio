@@ -142,7 +142,7 @@ class SegmentioCell: UICollectionViewCell {
             segmentTitleLabel?.textColor = selected ? selectedState.titleTextColor : defaultState.titleTextColor
             segmentTitleLabel?.font = selected ? selectedState.titleFont : defaultState.titleFont
             segmentTitleLabel?.alpha = selected ? selectedState.titleAlpha : defaultState.titleAlpha
-            segmentTitleLabel?.minimumScaleFactor = 0.5
+            segmentTitleLabel?.minimumScaleFactor = options.labelTextMinimumScaleFactor
             segmentTitleLabel?.adjustsFontSizeToFitWidth = true
         }
                 
@@ -295,7 +295,7 @@ class SegmentioCell: UICollectionViewCell {
             segmentTitleLabel?.textColor = defaultState.titleTextColor
             segmentTitleLabel?.font = defaultState.titleFont
             segmentTitleLabel?.text = content.title
-            segmentTitleLabel?.minimumScaleFactor = 0.5
+            segmentTitleLabel?.minimumScaleFactor = options.labelTextMinimumScaleFactor
             segmentTitleLabel?.adjustsFontSizeToFitWidth = true
         }
     }
